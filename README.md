@@ -76,3 +76,22 @@ The default notification **priority** is set to *high* (to always be sent). You 
 
 
 And that's it!
+
+APNS Batch import
+-----------------
+
+If you are migrating from another service ([Parse](http://www.parse.com) for example) and you already have APNS tokens on your database, you can [batch import them to Firebase](https://developers.google.com/instance-id/reference/server#create_registration_tokens_for_apns_tokens).
+
+To do so, just call the batchImport method with the following parameters:
+
+- **application**: Bundle id of the application
+- **sandbox**: Boolean to indicate sandbox environment (TRUE) or production (FALSE) - default to true
+- **apns_tokens**: The array of APNs tokens for the app instances you want to add or remove. *Maximum 100 tokens per request.*
+
+Example:
+
+    $client->batchImport([
+    	'application' => "com.french.revolution",
+    	'apns_tokens' => ["Robespierre's token", "Danton's token", "Louis XVI's token", ...],
+    	'sandbox' => false,
+    ]);
