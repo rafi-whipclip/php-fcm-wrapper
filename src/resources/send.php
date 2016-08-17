@@ -29,20 +29,20 @@ return [
 				],
 				"notification" => [
 					"location" => "json",
-					"required" => true,
+					"required" => false,
 					"type" => "object",
 					"properties" => [
 						"body_loc_key" => [
 							"type" => "string",
 							"location" => "json",
 							"description" => "The notification text",
-							"required" => true,
+							"required" => false,
 						],
 						"badge" => [
 							"type" => "integer",
 							"location" => "json",
 							"description" => "The badge value",
-							"required" => true,
+							"required" => false,
 							"default" => 1,
 						],
 						"sound" => [
