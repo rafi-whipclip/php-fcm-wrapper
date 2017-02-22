@@ -1,5 +1,5 @@
 {
-    "name": "rafi-whipclip/php-fcm-wrapper",
+    "name": "talalm/php-fcm-wrapper",
     "description": "PHP wrapper for FCM",
     "type": "library",
     "license": "MIT",
